@@ -1,0 +1,18 @@
+<table class='pure-table-bordered'>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Awesomeness</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+{{#each icecreams }}
+        <tr>
+            <td>{{ name }}</td>
+            <td>{{ awesomeness }}</td>
+            <td>${{ price }}</td>
+        </tr>
+{{/each }}
+    </tbody>
+</table>

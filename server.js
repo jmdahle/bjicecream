@@ -31,6 +31,7 @@ const icecreams = [
 
   app.get('/icecreams', (req, res) => {
     // Create an /icecreams route. It will loop over all the ice creams and display them all to the user.
+    res.render('allFlavors', { icecreams })
   });
 
 app.listen(PORT, () => console.log(`Server started on http://localhost:${PORT}`));
