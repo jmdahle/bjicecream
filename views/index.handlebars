@@ -2,11 +2,14 @@
     <div class="pure-u-1-3">
         <a href='/icecreams' class='pure-button'>View all available ice creams</a>
     </div>
-    <div class="pure-u-1-3">
-        <a href='/icecream/jawbreakers' class='pure-button'>View ice cream details for jawbreakers</a>
-    </div>
-    <div class="pure-u-1-3">
-        <a href='/icecream/vanilla' class='pure-button'>View ice cream details for vanilla</a>
+    <div class="pure-u-2-3">
+        <h2>Current Menu</h2>
+        <ul class='pure-menu-list'>
+{{#each icecreams }}
+            <li><a href='/icecream/{{name}}' class='pure-button'>View ice cream details for {{name}}</a></li>
+{{/each }}            
+        </ul>
+
     </div>
 </div>
 

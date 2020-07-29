@@ -1,5 +1,13 @@
+{{#if name }}
 <h2>Flavor: {{ name }} </h2>
 <ul>
     <li>Price: ${{ price }}</li>
     <li>Awesomeness: {{ awesomeness }}</li>
 </ul>
+{{else }}
+<h2>Flavor: {{ name }} not found!</h2>
+{{/if }}
+<footer>
+    <a href='/' class='pure-button'>Home</a>
+</footer>
+

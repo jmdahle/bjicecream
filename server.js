@@ -19,7 +19,7 @@ const icecreams = [
 
   // Routes
   app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', { icecreams });
   });
  
   app.get('/icecream/:name', (req, res) => {
