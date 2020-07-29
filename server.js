@@ -18,8 +18,15 @@ const icecreams = [
   ];
 
   // Routes
+  app.get('/', (req, res) => {
+    res.render('index');
+  });
+ 
   app.get('/icecream/:name', (req, res) => {
     //Using handlebars and express, create a route called /icecream/:name. When the route is hit, it will display the name, price and awesomeness for that specific ice cream.
+    const targetFlavor = req.params.name;
+    const foundFlavor = icecreams.find( flavor => flavor.name=== targetFlavor);
+    res.render('flavor', foundFlavor);
   });
 
   app.get('/icecreams', (req, res) => {
